@@ -1,0 +1,153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dsmml_sheap_seg_list_t &#8212; Cray DSMML 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bug Report" href="bug.html" />
+    <link rel="prev" title="dsmml_sheap_seg_info" href="dsmml_sheap_seg_info_t.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dsmml-sheap-seg-list-t">
+<h1>dsmml_sheap_seg_list_t<a class="headerlink" href="#dsmml-sheap-seg-list-t" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">structure</span> <span class="k">for</span> <span class="n">getting</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">created</span> <span class="n">symmetric</span> <span class="n">heaps</span> <span class="k">as</span> <span class="n">linked</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">struct</span> <span class="n">dsmml_sheap_seg_list</span> <span class="p">{</span>
+    <span class="n">struct</span> <span class="n">dsmml_sheap_seg_list</span> <span class="o">*</span><span class="nb">next</span><span class="p">;</span>
+    <span class="n">dsmml_sheap_seg_info_t</span> <span class="o">*</span>     <span class="n">segment</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">dsmml_sheap_seg_list_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="members">
+<h2>Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span>        <span class="nb">next</span> <span class="n">segment</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">linked</span> <span class="nb">list</span>
+<span class="n">segment</span>     <span class="n">pointer</span> <span class="k">with</span> <span class="n">the</span> <span class="n">segment</span> <span class="n">information</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Refer</span> <span class="n">dsmml_sheap_seg_info_t</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="ow">and</span> <span class="n">dsmml_get_sheap_seg_list</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Cray DSMML</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Compile and Launch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="envvar.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_init.html">dsmml_init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_finalize.html">dsmml_finalize</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_get_version_info.html">dsmml_get_version_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_create_sheap_seg.html">dsmml_create_sheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_create_ssheap_seg.html">dsmml_create_ssheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_share_ssheap_seg.html">dsmml_share_ssheap_init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_init_ssheap_seg.html">dsmml_init_ssheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_get_sheap_seg.html">dsmml_get_sheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_get_sheap_seg_list.html">dsmml_get_sheap_seg_list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_malloc.html">dsmml_sheap_malloc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_realloc.html">dsmml_sheap_realloc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_free.html">dsmml_sheap_free</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_init_info_t.html">dsmml_init_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_seg_info_t.html">dsmml_sheap_seg_info</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">dsmml_sheap_seg_list_t</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bug.html">Bug Report</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="dsmml_sheap_seg_info_t.html" title="previous chapter">dsmml_sheap_seg_info</a></li>
+      <li>Next: <a href="bug.html" title="next chapter">Bug Report</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, HPE.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dsmml_sheap_seg_list_t.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
