@@ -1,38 +1,174 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>dsmml_finalize &#8212; Cray DSMML 0.1.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>dsmml_finalize &mdash; Cray DSMML 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="dsmml_get_version_info" href="dsmml_get_version_info.html" />
-    <link rel="prev" title="dsmml_init" href="dsmml_init.html" />
+    <link rel="prev" title="dsmml_init" href="dsmml_init.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="index.html" class="icon icon-home"> Cray DSMML
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Compile and Launch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="envvar.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_init.html">dsmml_init</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">dsmml_finalize</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#return-values">Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_get_version_info.html">dsmml_get_version_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_create_sheap_seg.html">dsmml_create_sheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_create_ssheap_seg.html">dsmml_create_ssheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_share_ssheap_seg.html">dsmml_share_ssheap_init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_init_ssheap_seg.html">dsmml_init_ssheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_get_sheap_seg.html">dsmml_get_sheap_seg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_get_sheap_seg_list.html">dsmml_get_sheap_seg_list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_malloc.html">dsmml_sheap_malloc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_realloc.html">dsmml_sheap_realloc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_free.html">dsmml_sheap_free</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_init_info_t.html">dsmml_init_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_seg_info_t.html">dsmml_sheap_seg_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_seg_list_t.html">dsmml_sheap_seg_list_t</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bug.html">Bug Report</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cray DSMML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>dsmml_finalize</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/dsmml_finalize.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="dsmml-finalize">
 <h1>dsmml_finalize<a class="headerlink" href="#dsmml-finalize" title="Permalink to this headline">¶</a></h1>
@@ -76,90 +212,52 @@
 </div>
 
 
+           </div>
+           
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Cray DSMML</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Compile and Launch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="envvar.html">Environment Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_init.html">dsmml_init</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">dsmml_finalize</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_get_version_info.html">dsmml_get_version_info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_create_sheap_seg.html">dsmml_create_sheap_seg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_create_ssheap_seg.html">dsmml_create_ssheap_seg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_share_ssheap_seg.html">dsmml_share_ssheap_init</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_init_ssheap_seg.html">dsmml_init_ssheap_seg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_get_sheap_seg.html">dsmml_get_sheap_seg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_get_sheap_seg_list.html">dsmml_get_sheap_seg_list</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_malloc.html">dsmml_sheap_malloc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_realloc.html">dsmml_sheap_realloc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_free.html">dsmml_sheap_free</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_init_info_t.html">dsmml_init_info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_seg_info_t.html">dsmml_sheap_seg_info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dsmml_sheap_seg_list_t.html">dsmml_sheap_seg_list_t</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bug.html">Bug Report</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="dsmml_init.html" title="previous chapter">dsmml_init</a></li>
-      <li>Next: <a href="dsmml_get_version_info.html" title="next chapter">dsmml_get_version_info</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dsmml_get_version_info.html" class="btn btn-neutral float-right" title="dsmml_get_version_info" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dsmml_init.html" class="btn btn-neutral float-left" title="dsmml_init" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, HPE
 
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
-
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, HPE.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/dsmml_finalize.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>
