@@ -1,0 +1,7 @@
+title: Cray DSMML
+description: Cray DSMML is a proprietary Symmetric Heap Management library from Cray, a Hewlett Packard Enterprise Company. 
+show_downloads: false
+theme: jekyll-theme-minimal
+
+gems:
+    - jekyll-mentions
